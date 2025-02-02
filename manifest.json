@@ -1,0 +1,38 @@
+{
+    "manifest_version": 3,
+    "name": "Prime Gaming Ratings",
+    "version": "1.0",
+    "description": "Get video game names from Amazon Prime Gaming and fetch ratings from IGDB API.",
+    "permissions": [
+        "scripting",
+        "activeTab",
+        "storage"
+    ],
+    "host_permissions": [
+        "https://*.amazon.com/*",
+        "https://gaming.amazon.com/*"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "icons/icon16.png",
+            "32": "icons/icon32.png",
+            "48": "icons/icon48.png",
+            "128": "icons/icon128.png"
+        }
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://*.amazon.com/*",
+                "https://gaming.amazon.com/*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ]
+}

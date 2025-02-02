@@ -1,0 +1,110 @@
+/* Material Design 3 CSS with Twitch colors */
+:root {
+    /* Twitch-inspired MD3 Colors */
+    --md-primary: #9147ff;
+    /* Twitch primary purple */
+    --md-primary-container: #e9deff;
+    /* Light purple container */
+    --md-on-primary: #ffffff;
+    --md-on-primary-container: #2d1846;
+    /* Dark purple for text on light container */
+    --md-surface: #fdfcff;
+    --md-surface-container: #f5f3f7;
+    --md-outline: #7d7d7d;
+
+    /* MD3 Elevation */
+    --md-elevation-1: 0 1px 2px rgba(0, 0, 0, 0.3);
+    --md-elevation-2: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 3px 1px rgba(0, 0, 0, 0.15);
+
+    /* MD3 Shape */
+    --md-shape-corner-extra-small: 4px;
+    --md-shape-corner-medium: 12px;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: var(--md-surface);
+    color: #1a1c1e;
+    min-width: 400px;
+}
+
+.container {
+    width: 100%;
+}
+
+.header {
+    background-color: var(--md-primary-container);
+    padding: 16px 24px;
+    border-radius: 0 0 var(--md-shape-corner-medium) var(--md-shape-corner-medium);
+}
+
+.title {
+    color: var(--md-on-primary-container);
+    font-size: 22px;
+    font-weight: 500;
+    margin: 0;
+    line-height: 28px;
+}
+
+.content {
+    padding: 24px;
+}
+
+.button-primary {
+    background-color: var(--md-primary);
+    color: var(--md-on-primary);
+    border: none;
+    border-radius: var(--md-shape-corner-extra-small);
+    padding: 10px 24px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+    cursor: pointer;
+    box-shadow: var(--md-elevation-1);
+    transition: box-shadow 0.2s, background-color 0.2s;
+}
+
+.button-primary:hover {
+    box-shadow: var(--md-elevation-2);
+    background-color: #7d2fff;
+    /* Darker Twitch purple */
+}
+
+.button-primary:active {
+    background-color: #5c1fb8;
+    /* Even darker Twitch purple */
+}
+
+.output {
+    margin-top: 24px;
+}
+
+.output h2 {
+    color: #1a1c1e;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0 0 16px 0;
+    line-height: 24px;
+}
+
+.output p {
+    color: #42474e;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 8px 0;
+}
+
+.output strong {
+    color: #1a1c1e;
+    font-weight: 500;
+}
+
+/* Loading state */
+.output p:first-child:last-child {
+    color: #42474e;
+    font-size: 14px;
+    line-height: 20px;
+}
