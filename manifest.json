@@ -10,7 +10,8 @@
     ],
     "host_permissions": [
         "https://*.amazon.com/*",
-        "https://gaming.amazon.com/*"
+        "https://gaming.amazon.com/*",
+        "https://insertyourworkersurlhere.workers.dev/*"
     ],
     "background": {
         "service_worker": "background.js"

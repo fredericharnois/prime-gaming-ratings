@@ -48,14 +48,16 @@ document.getElementById("scrape").addEventListener("click", async () => {
 });
 
 async function fetchGameRatings(gameTitle) {
-    const clientId = "";
-    const clientSecret = "";
+    const newProxyUrl = "https://insertyourworkersurlhere.workers.dev/";
 
     return new Promise((resolve) => {
         chrome.runtime.sendMessage(
             {
                 action: "fetchGameRatings",
-                payload: { clientId, clientSecret, gameTitle },
+                payload: {
+                    proxyUrl: newProxyUrl,
+                    query: `search "${gameTitle}"; fields name,aggregated_rating,rating;`
+                },
             },
             (response) => {
                 if (chrome.runtime.lastError) {
